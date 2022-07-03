@@ -121,3 +121,8 @@ SELECT DISTINCT country_name
 FROM `<dataset_name>.<table_name>`
 WHERE country_area IS NULL
 ORDER BY country_name ASC
+
+ 
+ 
+                                               You are Doing Great Job!
+                                               
