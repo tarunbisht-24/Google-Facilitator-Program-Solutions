@@ -9,7 +9,7 @@ export FRONTEND_IDENTIFIER=
 gcloud services enable cloudbuild.googleapis.com
 gcloud services enable container.googleapis.com
 
-<h2>TASK 1 --------------------------------------------<h2>
+TASK 1 --------------------------------------------
 
 git clone https://github.com/googlecodelabs/monolith-to-microservices.git
 
