@@ -1,4 +1,4 @@
-Make Environment Variables for names which are not Permanent so that we don't need to make changes again n again!
+Make Environment Variables for names which are not permanent so that we don't need to make changes again and again!
 
 export MONOLITH_IDENTIFIER=
 export CLUSTER_NAME=
@@ -9,7 +9,7 @@ export FRONTEND_IDENTIFIER=
 gcloud services enable cloudbuild.googleapis.com
 gcloud services enable container.googleapis.com
 
-TASK 1 --------------------------------------------
+<h2>TASK 1 --------------------------------------------<h2>
 
 git clone https://github.com/googlecodelabs/monolith-to-microservices.git
 
