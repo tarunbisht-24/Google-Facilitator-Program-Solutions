@@ -2,6 +2,7 @@ Firstly FOLLOW ALONG WITH THE VIDEO THEN COPY THESE COMMANDS!
 
 One Important Point - Don't forget to replace <dataset_name> <table_name>
 
+
 TASK 1 ------------------------------------------------------------------
 
 CREATE OR REPLACE TABLE <dataset_name>.<table_name>
@@ -72,9 +73,9 @@ WHERE
    t0.country_name = t1.country_name
    
    
- TASK 5 -------------------------------------------------------------------------
+TASK 5 -------------------------------------------------------------------------
  
- UPDATE
+UPDATE
    `<dataset_name>.<table_name>` t0
 SET
    t0.mobility.avg_retail      = t1.avg_retail,
@@ -96,8 +97,7 @@ FROM
    ) AS t1
 WHERE
    CONCAT(t0.country_name, t0.date) = CONCAT(t1.country_region, t1.date)
-   
-   
+     
    
 TASK 6 ----------------------------------------------------------------------------
 
@@ -105,11 +105,13 @@ SELECT country_name, population
 FROM `<dataset_name>.<table_name>`
 WHERE population is NULL
 
+
 QUERY 2 ----------------------------
 
 SELECT country_name, country_area
 FROM `<dataset_name>.<table_name>`
 WHERE country_area IS NULL
+
 
 QUERY 3 -----------------------------
 
