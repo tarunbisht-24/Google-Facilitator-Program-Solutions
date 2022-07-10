@@ -1,11 +1,9 @@
-1ST TASK -------------------------------------------------------------------------------------------------
+TASK 1 ----------------------------------------------------------------------------------------------
 
 
 bq mk austin
 
-
-
-2ND TASK  ------------------------------------------------------------------------------------------------
+TASK 2 ----------------------------------------------------------------------------------------------
 
 CREATE OR REPLACE MODEL austin.location_model
 OPTIONS
@@ -27,7 +25,7 @@ WHERE
     AND duration_minutes > 0
 
 
-3RD TASK ----------------------------------------------------------------------------------------------------
+TASK 3 ----------------------------------------------------------------------------------------------
 
 
 CREATE OR REPLACE MODEL austin.subscriber_model
@@ -42,9 +40,8 @@ FROM `bigquery-public-data.austin_bikeshare.bikeshare_trips` AS trips
 WHERE EXTRACT(YEAR FROM start_time) = <replace year>
 
 
+2ND QUERY  ------------------------------------------------------------------------------------------
 
-
-2ND QUERY  -----------------------------------------------------------------------
 
 CREATE OR REPLACE MODEL austin.subscriber_model
 OPTIONS
@@ -58,9 +55,10 @@ FROM `bigquery-public-data.austin_bikeshare.bikeshare_trips` AS trips
 WHERE EXTRACT(YEAR FROM start_time) = <replace year>
 
 
-4RTH TASK ----------------------------------------------------------------------------------------------------
+TASK 6 ----------------------------------------------------------------------------------------------
 
-1ST MODEL ---------------------
+
+1ST MODEL --------------------------
 
 
 -- Evaluation metrics for location_model
@@ -85,7 +83,6 @@ FROM
 )
 
 
-
 2ND MODEL --------------------------
 
 
@@ -107,10 +104,11 @@ FROM
 )
 
 
+TASK 6 ----------------------------------------------------------------------------------------------
 
-5TH TASK  -------------------------------------------------------------------------------------------------------
 
 1ST ONE  ---------------------------
+
 
 SELECT
   start_station_name,
@@ -125,8 +123,8 @@ ORDER BY
   trips DESC
 
 
-
 2ND ONE -----------------------------
+
 
 SELECT AVG(predicted_duration_minutes) AS average_predicted_trip_length
 FROM ML.predict(MODEL austin.subscriber_model, (
@@ -144,4 +142,4 @@ WHERE
   
 
 
-                                          COMPLETED !!!!!!!!!!!!!
+                                          YOU ARE DOING GREAT JOB!!
