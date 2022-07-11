@@ -1,4 +1,5 @@
-1ST TASK ----------------------------------------------------------------------------------------------------------
+TASK 1 ------------------------------------------------------------------------------------------
+
 
 CREATE OR REPLACE TABLE
 taxirides.<Table_Name_as_mention_in_lab> AS
@@ -25,9 +26,11 @@ AND pickup_latitude < 45
 AND dropoff_latitude > 37
 AND dropoff_latitude < 45
 AND passenger_count > 3    [Change_as_mention_in_lab]
-  
-  2ND TASK ---------------------------------------------------------------------------------------------------------------
-  
+
+
+TASK 2 ------------------------------------------------------------------------------------------
+
+
 CREATE OR REPLACE MODEL taxirides.<Model Name_as_mention_in_lab>
 TRANSFORM(
 * EXCEPT(pickup_datetime)
@@ -42,10 +45,13 @@ AS
 SELECT * FROM taxirides.<Table_Name_as_mention_in_lab>
 
 
-3RD TASK ------------------------------------------------------------------------------------------------------------------
+TASK 3 ------------------------------------------------------------------------------------------
+
 
 CREATE OR REPLACE TABLE taxirides.2015_fare_amount_predictions
 AS
 SELECT * FROM ML.PREDICT(MODEL taxirides.<Model Name_as_mention_in_lab>,(
 SELECT * FROM taxirides.report_prediction_data)
 )
+
+                                                      YOU ARE DOING GREAT JOB!!!
