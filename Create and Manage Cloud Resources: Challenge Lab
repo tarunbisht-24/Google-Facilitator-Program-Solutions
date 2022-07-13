@@ -67,4 +67,5 @@ gcloud compute forwarding-rules create http-content-rule \
 gcloud compute forwarding-rules list
 
                              
-                                                         YOU ARE DOING GREAT JOB!!!
+
+                                                          YOU ARE DOING GREAT JOB!!!
