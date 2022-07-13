@@ -55,4 +55,4 @@ gcloud deployment-manager deployments create test --config=qwiklabs.yaml
 
 
                                          
-                                                    You are Doing Great Job!!!
+                                                          YOU ARE DOING GREAT JOB!!!
