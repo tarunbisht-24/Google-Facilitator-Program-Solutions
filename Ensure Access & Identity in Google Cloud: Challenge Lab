@@ -60,5 +60,5 @@ kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1
 kubectl expose deployment hello-server --name orca-hello-service --type LoadBalancer --port 80 --target-port 8080
 
 
-                                                          YOU ARE DOING GREAT JOB!!! 
-   
+
+                                                          YOU ARE DOING GREAT JOB!!!
