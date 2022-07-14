@@ -77,5 +77,5 @@ export FRONTEND_SERVICE_IP=$(kubectl get -o \
 jsonpath="{.status.loadBalancer.ingress[0].ip}" --namespace=production services gceme-frontend)
 
 
-                                                     YOU ARE DOING GREAT JOB!!! 
- 
+
+                                                          YOU ARE DOING GREAT JOB!!! 
