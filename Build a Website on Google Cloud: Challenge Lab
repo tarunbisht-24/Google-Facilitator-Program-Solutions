@@ -81,6 +81,6 @@ kubectl expose deployment $FRONTEND_IDENTIFIER --type=LoadBalancer --port 80 --t
 
 kubectl get svc -w
 
-
-
-                                                          YOU ARE DOING GREAT JOB!!!
+                                                     
+                                                     
+                                                     YOU ARE DOING GREAT JOB, KEEP WORKING !!!
