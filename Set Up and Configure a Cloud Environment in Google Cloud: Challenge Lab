@@ -107,8 +107,8 @@ FOLLOW ANY YOUTUBE VIDEO!!
 TASK 9 -------------------------------------------------------------------------------
 
 
-gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=user:$USER_NAME2 --role=roles/editor
+gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=user:$USER_NAME2 --role=roles/edior
 
 
 
-                                                     YOU ARE DOING GREAT JOB, KEEP WORKING !!!
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
