@@ -31,4 +31,4 @@ bq query --use_legacy_sql=false "SELECT locale,COUNT(locale) as lcount FROM imag
 
 
 
-                                                     YOU ARE DOING GREAT JOB, KEEP WORKING !!!
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
