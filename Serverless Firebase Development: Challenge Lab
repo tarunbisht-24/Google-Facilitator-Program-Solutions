@@ -58,5 +58,5 @@ gcloud beta run deploy $FRONTEND_PRODUCTION_SERVICE --image gcr.io/$GOOGLE_CLOUD
 
 
 
-                                                     YOU ARE DOING GREAT JOB, KEEP WORKING !!!
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
 
