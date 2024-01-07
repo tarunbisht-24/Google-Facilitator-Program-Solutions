@@ -1,6 +1,10 @@
+WAY 1 ------------------------------------------------------------------------------------------
+
 export MESSAGE=""   #fill your respective messages!
 
--------------------------------------------------------------
+
+WAY 2 ------------------------------------------------------------------------------------------
+
 gcloud services enable appengine.googleapis.com
 git clone https://github.com/GoogleCloudPlatform/python-docs-samples.git
 cd python-docs-samples/appengine/standard_python3/hello_world
@@ -24,8 +28,8 @@ gcloud app deploy
 echo -e "\033[32mNow type Y then enter again enter then type N when asked\033[0m"
 gcloud compute ssh "lab-setup"
 
----------------------------------------------------------------------------------------
 
+WAY 3 ------------------------------------------------------------------------------------------
 
 git clone https://github.com/GoogleCloudPlatform/python-docs-samples.git
 cd python-docs-samples/appengine/standard_python3/hello_world
@@ -33,7 +37,4 @@ exit
 
 
 
-
-
-
-
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
