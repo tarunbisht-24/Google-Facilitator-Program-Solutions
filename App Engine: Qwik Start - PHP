@@ -1,5 +1,11 @@
+TASK 1 ------------------------------------------------------------------------------------------
+
 gcloud services enable appengine.googleapis.com
 git clone https://github.com/GoogleCloudPlatform/php-docs-samples.git
 cd php-docs-samples/appengine/standard/helloworld
 gcloud app deploy
 gcloud app browse
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
