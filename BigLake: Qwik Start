@@ -18,3 +18,7 @@ bq mkdef \
 "gs://$DEVSHELL_PROJECT_ID/invoice.csv" > /tmp/tabledef.json
 bq show --schema --format=prettyjson  demo_dataset.external_table > /tmp/schema
 bq update --external_table_definition=/tmp/tabledef.json --schema=/tmp/schema demo_dataset.external_table
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
