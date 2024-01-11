@@ -1,6 +1,5 @@
 TASK 2 -------------------------
 
-
 sudo su -
 
 apt-get update
