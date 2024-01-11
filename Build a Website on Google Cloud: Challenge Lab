@@ -10,7 +10,7 @@ gcloud services enable cloudbuild.googleapis.com
 gcloud services enable container.googleapis.com
 
 
-TASK 1 --------------------------------------------
+TASK 1 ------------------------------------------------------------------------------------------
 
 git clone https://github.com/googlecodelabs/monolith-to-microservices.git
 
@@ -21,7 +21,7 @@ cd ~/monolith-to-microservices/monolith
 gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/${MONOLITH_IDENTIFIER}:1.0.0 .
 
 
-TASK 2 ----------------------------------------------
+TASK 2 ------------------------------------------------------------------------------------------
 
 gcloud config set compute/zone us-central1-a
 
@@ -35,7 +35,7 @@ kubectl expose deployment $MONOLITH_IDENTIFIER --type=LoadBalancer --port 80 --t
 kubectl get svc -w
 
 
-TASK 3 -----------------------------------------------
+TASK 3 ------------------------------------------------------------------------------------------
 
 cd ~/monolith-to-microservices/microservices/src/orders
 gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/${ORDERS_IDENTIFIER}:1.0.0 .
@@ -44,7 +44,7 @@ cd ~/monolith-to-microservices/microservices/src/products
 gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/${PRODUCTS_IDENTIFIER}:1.0.0 .
 
 
-TASK 4 ------------------------------------------------
+TASK 4 ------------------------------------------------------------------------------------------
 
 kubectl create deployment $ORDERS_IDENTIFIER --image=gcr.io/${GOOGLE_CLOUD_PROJECT}/${ORDERS_IDENTIFIER}:1.0.0
 kubectl expose deployment $ORDERS_IDENTIFIER --type=LoadBalancer --port 80 --target-port 8081
@@ -57,7 +57,7 @@ kubectl expose deployment $PRODUCTS_IDENTIFIER --type=LoadBalancer --port 80 --t
 kubectl get svc -w
 
 
-TASK 5 ------------------------------------------------
+TASK 5 ------------------------------------------------------------------------------------------
 
 export ORDERS_SERVICE_IP=$(kubectl get services -o jsonpath="{.items[1].status.loadBalancer.ingress[0].ip}")
 export PRODUCTS_SERVICE_IP=$(kubectl get services -o jsonpath="{.items[2].status.loadBalancer.ingress[0].ip}")
@@ -68,19 +68,19 @@ sed -i "s/localhost:8082/$PRODUCTS_SERVICE_IP/g" .env
 npm run build
 
 
-TASK 6 ---------------------------------------------------
+TASK 6 ------------------------------------------------------------------------------------------
 
 cd ~/monolith-to-microservices/microservices/src/frontend
 gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/${FRONTEND_IDENTIFIER}:1.0.0 .
 
 
-TASK 7 ---------------------------------------------------
+TASK 7 ------------------------------------------------------------------------------------------
 
 kubectl create deployment $FRONTEND_IDENTIFIER --image=gcr.io/${GOOGLE_CLOUD_PROJECT}/${FRONTEND_IDENTIFIER}:1.0.0
 kubectl expose deployment $FRONTEND_IDENTIFIER --type=LoadBalancer --port 80 --target-port 8080
 
 kubectl get svc -w
 
-                                                     
-                                                     
+
+
                                                      YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
