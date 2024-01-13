@@ -1,7 +1,9 @@
-TASK -1 FROM ANY YOUTUBE VIDEO
+TASK 1 ------------------------------------------------------------------------------------------
+
+FROM ANY YOUTUBE VIDEO
 
 
-TASK 2 - 
+TASK 2 ------------------------------------------------------------------------------------------
 
 gcloud config set compute/zone us-east1-b
 
@@ -13,7 +15,8 @@ kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:2
 
 kubectl expose deployment hello-server --type=LoadBalancer --port 8083                    [Kindly check port number one's]
 
-3RD TASK ------
+
+TASK 3 ------------------------------------------------------------------------------------------
 
 gcloud compute instance-templates create web-server-template \
           --metadata-from-file startup-script=startup.sh \
@@ -62,6 +65,10 @@ gcloud compute forwarding-rules create http-content-rule \
         --ports 80
         
 gcloud compute forwarding-rules list
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
 
                              LAB COMPLETED - PLEASE LIKE THE VIDEO AND SUBSCRIBE THE CHANNEL!
 
