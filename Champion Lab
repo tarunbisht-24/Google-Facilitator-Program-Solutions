@@ -1,10 +1,8 @@
 Task 1 --------------------------------------------------------
- 
- 
+  
 gsutil cp gs://spls/solutions/DRL3.ipynb .
 
- 
- 
+
 Task 8 --------------------------------------------------------------------
  
 In cloud shell:
@@ -13,4 +11,7 @@ gcloud auth configure-docker us-docker.pkg.dev
 docker build . -t us-docker.pkg.dev/$DEVSHELL_PROJECT_ID/drl-lap-time-predictor/webapp:0.2
 gcloud artifacts repositories create drl-lap-time-predictor --repository-format=docker --location=us
 docker push us-docker.pkg.dev/$DEVSHELL_PROJECT_ID/drl-lap-time-predictor/webapp:0.2
- 
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
