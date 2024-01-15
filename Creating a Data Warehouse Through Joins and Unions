@@ -98,10 +98,11 @@ bq query --use_legacy_sql=false \
 'SELECT * FROM ecommerce.sales_by_sku_20170801
 UNION ALL
 
-
-
-                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
 SELECT * FROM ecommerce.sales_by_sku_20170802'
 bq query --use_legacy_sql=false \
 "SELECT * FROM \`ecommerce.sales_by_sku_2017*\`
 WHERE _TABLE_SUFFIX = '0802'"
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
