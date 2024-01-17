@@ -57,3 +57,7 @@ curl -s \
   -d @new-inspect-file.json -o redact-output.txt
 cat redact-output.txt
 gsutil cp redact-output.txt gs://$DEVSHELL_PROJECT_ID-bucket
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
