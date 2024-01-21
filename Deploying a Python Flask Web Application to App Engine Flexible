@@ -1,6 +1,7 @@
 Use us-central1 as Region when needed!
 
-----------------------------------------------------
+
+TASK 1 ------------------------------------------------------------------------------------------
 
 gcloud storage cp -r gs://spls/gsp023/flex_and_vision/ .
 cd flex_and_vision
@@ -21,12 +22,14 @@ export CLOUD_STORAGE_BUCKET=${PROJECT_ID}
 gsutil mb gs://${PROJECT_ID}
 python main.py
 
-------------------------------------------------
+
+TASK 2 ------------------------------------------------------------------------------------------
 
 Now use web preview and upload any face image!
 Then press Ctrl + C to stop the script
 
-------------------------------------------------------------
+
+TASK 3 ------------------------------------------------------------------------------------------
 
 rm -f app.yaml
 cat > app.yaml << EOF
@@ -48,3 +51,5 @@ gcloud config set app/cloud_build_timeout 1000
 gcloud app deploy
 
 
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
