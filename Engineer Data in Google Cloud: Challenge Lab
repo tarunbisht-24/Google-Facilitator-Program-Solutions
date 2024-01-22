@@ -1,6 +1,5 @@
 TASK 1 ------------------------------------------------------------------------------------------
 
-
 CREATE OR REPLACE TABLE
 taxirides.<Table_Name_as_mention_in_lab> AS
 SELECT
@@ -30,7 +29,6 @@ AND passenger_count > 3    [Change_as_mention_in_lab]
 
 TASK 2 ------------------------------------------------------------------------------------------
 
-
 CREATE OR REPLACE MODEL taxirides.<Model Name_as_mention_in_lab>
 TRANSFORM(
 * EXCEPT(pickup_datetime)
@@ -46,7 +44,6 @@ SELECT * FROM taxirides.<Table_Name_as_mention_in_lab>
 
 
 TASK 3 ------------------------------------------------------------------------------------------
-
 
 CREATE OR REPLACE TABLE taxirides.2015_fare_amount_predictions
 AS
