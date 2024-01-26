@@ -5,7 +5,6 @@ CREATE OR REPLACE TABLE lab.51 (transaction_hash STRING) as
 SELECT transaction_id FROM `bigquery-public-data.bitcoin_blockchain.transactions` , UNNEST( outputs ) as outputs
 where outputs.output_satoshis = 19499300000000
 
-
 QUERY 2 -----------------------------------------------------------------------------------
 
 
@@ -31,4 +30,4 @@ where address = "1XPTgDRhN8RFnzniWCddobD9iKZatrvH4"
 
 
                                                     
-                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!                                                 
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
