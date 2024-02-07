@@ -1,4 +1,4 @@
-TASK 3RD -----------------------------
+TASK 3 ------------------------------------------------------------------------------------------
 
 connection name :- myfunction
 
@@ -8,7 +8,7 @@ REMOTE WITH CONNECTION us.myfunction
 OPTIONS(endpoint="https://us-west1-qwiklabs-gcp-00-460641210213.cloudfunctions.net/remote_add");
 
 
-TASK 4 ---------------------------
+TASK 4 ------------------------------------------------------------------------------------------
 
 import json
 
