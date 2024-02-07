@@ -5,7 +5,6 @@ bq mk austin
 
 TASK 2 ----------------------------------------------------------------------------------------------
 
-
 CREATE OR REPLACE MODEL austin.location_model
 OPTIONS
   (model_type='linear_reg', labels=['duration_minutes']) AS
@@ -28,7 +27,6 @@ WHERE
 
 TASK 3 ----------------------------------------------------------------------------------------------
 
-
 CREATE OR REPLACE MODEL austin.subscriber_model
 OPTIONS
   (model_type='linear_reg', labels=['duration_minutes']) AS
@@ -42,7 +40,6 @@ WHERE EXTRACT(YEAR FROM start_time) = <replace year>
 
 
 2ND QUERY -------------------------------------------------------------------------------------------
-
 
 CREATE OR REPLACE MODEL austin.subscriber_model
 OPTIONS
@@ -60,7 +57,6 @@ TASK 4 -------------------------------------------------------------------------
 
 
 1ST MODEL --------------------------
-
 
 -- Evaluation metrics for location_model
 SELECT
@@ -86,7 +82,6 @@ FROM
 
 2ND MODEL --------------------------
 
-
 -- Evaluation metrics for subscriber_model
 SELECT
   SQRT(mean_squared_error) AS rmse,
@@ -110,7 +105,6 @@ TASK 5 -------------------------------------------------------------------------
 
 1ST ONE  ---------------------------
 
-
 SELECT
   start_station_name,
   COUNT(*) AS trips
@@ -126,7 +120,6 @@ ORDER BY
 
 2ND ONE -----------------------------
 
-
 SELECT AVG(predicted_duration_minutes) AS average_predicted_trip_length
 FROM ML.predict(MODEL austin.subscriber_model, (
 SELECT
@@ -140,7 +133,7 @@ WHERE
   EXTRACT(YEAR FROM start_time) = <replace year>
   AND subscriber_type = 'Single Trip'
   AND start_station_name = '21st & Speedway @PCL'))
-  
+
 
 
                                                      YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
