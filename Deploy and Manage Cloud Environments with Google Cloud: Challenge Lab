@@ -41,7 +41,6 @@ kubectl port-forward --namespace default $DECK_POD 8080:9000 >> /dev/null &
 
 AT THE EVERY END ------------------------------------------------------------------------------------------
 
-
 gcloud config set compute/zone us-east1-b
 
 gcloud source repos clone sample-app
