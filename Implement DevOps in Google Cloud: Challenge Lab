@@ -1,4 +1,4 @@
-Task 1 -----------------------------------------------------------------------
+TASK 1 ------------------------------------------------------------------------------------------
 
 gcloud config set compute/zone us-east1-b
 
@@ -27,6 +27,7 @@ kubectl apply -f k8s/services -n production
 kubectl get svc
 kubectl get service gceme-frontend -n production
 
+
 After these commands do the jenkins part then do the rest commands -
 
 git init
@@ -39,8 +40,7 @@ git commit -m "initial commit"
 git push origin master
 
 
-Task 2 -----------------------------------------------------------------------
-
+TASK 2 ------------------------------------------------------------------------------------------
 
 git checkout -b new-feature
 
@@ -51,8 +51,7 @@ git commit -m "Version 2.0.0"
 git push origin new-feature
 
 
-Task 3 -----------------------------------------------------------------------
-
+TASK 3 ------------------------------------------------------------------------------------------
 
 curl http://localhost:8001/api/v1/namespaces/new-feature/services/gceme-frontend:80/proxy/version
 kubectl get service gceme-frontend -n production  
@@ -63,7 +62,8 @@ jsonpath="{.status.loadBalancer.ingress[0].ip}" --namespace=production services 
 git checkout master
 git push origin master
 
-4rth Task -------
+
+TASK 4 ------------------------------------------------------------------------------------------
 
 export FRONTEND_SERVICE_IP=$(kubectl get -o \
 jsonpath="{.status.loadBalancer.ingress[0].ip}" --namespace=production services gceme-frontend)
@@ -75,6 +75,10 @@ git merge canary
 git push origin master
 export FRONTEND_SERVICE_IP=$(kubectl get -o \
 jsonpath="{.status.loadBalancer.ingress[0].ip}" --namespace=production services gceme-frontend)
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
 
 
 
