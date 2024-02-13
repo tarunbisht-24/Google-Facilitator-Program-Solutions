@@ -79,7 +79,3 @@ jsonpath="{.status.loadBalancer.ingress[0].ip}" --namespace=production services 
 
 
                                                      YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
-
-
-
-                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
