@@ -1,6 +1,5 @@
 TASK 1 ------------------------------------------------------------------------------------------------------------
 
-
 SELECT sum(cumulative_confirmed) as total_cases_worldwide
 FROM `bigquery-public-data.covid19_open_data.covid19_open_data`
 WHERE date=<change date eg'020-04-10'>
@@ -26,7 +25,7 @@ from deaths_by_states
 where death_count > <change deathcount here>
 
 
-TASK 3 -------------------------------------------------------------------------------------------------------------
+TASK 3 ------------------------------------------------------------------------------------------
 
 SELECT * FROM (
 
@@ -54,7 +53,6 @@ where country_name="Italy" AND date BETWEEN <change month here '2020-04-01'> and
 
 TASK 5 ----------------------------------------------------------------------------------------------------------------
 
-
 SELECT date
 
 FROM `bigquery-public-data.covid19_open_data.covid19_open_data`
@@ -64,7 +62,6 @@ where country_name="Italy" and cumulative_deceased> <change the value of death c
 order by date asc
 
 limit 1
-
 
 
 TASK 6 -------------------------------------------------------------------------------------------------------------------
@@ -118,7 +115,6 @@ select count(*)
 from india_previous_day_comparison
 
 where net_new_cases=0
-
 
 
 TASK 7 --------------------------------------------------------------------------------------------------------------
@@ -286,8 +282,6 @@ LIMIT 1
 select first_day_cases, last_day_cases, days_diff, POW((last_day_cases/first_day_cases),(1/days_diff))-1 as cdgr
 
 from summary
-
-
 
 
 TASK 10 -----------------------------------------------------------------------------------------------------------------
