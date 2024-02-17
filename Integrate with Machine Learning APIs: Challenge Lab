@@ -8,7 +8,6 @@ export CLOUD_STORAGE_ROLE=
 
 TASK 1 ------------------------------------------------------------------------------------ TASK 5 (RUN ALL THESE COMMANDS)
 
-
 gcloud iam service-accounts create sample-sa
 
 gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:sample-sa@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role=$BIGQUERY_ROLE
