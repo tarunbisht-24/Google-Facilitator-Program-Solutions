@@ -7,15 +7,15 @@ cat > values.json << EOF
 }
 EOF
 
----------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 Now follow my instructions
 
-----------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 export OAUTH2_TOKEN=
 
------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 export PROJECT_ID=$(gcloud config get-value project)
 curl -X POST --data-binary @values.json \
@@ -30,3 +30,7 @@ curl -X POST --data-binary @$OBJECT \
     -H "Authorization: Bearer $OAUTH2_TOKEN" \
     -H "Content-Type: image/png" \
     "https://www.googleapis.com/upload/storage/v1/b/$BUCKET_NAME/o?uploadType=media&name=demo-image"
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
