@@ -18,3 +18,7 @@ gcloud dataproc jobs submit spark \
     --class=$MAIN_CLASS \
     --jars=$JAR_FILE \
     -- $ARGUMENTS
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
