@@ -1,6 +1,6 @@
 export REGION=#From Task5
 
-----------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 gsutil mb gs://$DEVSHELL_PROJECT_ID
 curl -O -L https://github.com/Ayush7-BIT/Google-Facilitator-Program-Solutions/blob/main/start_station_data.csv
@@ -10,6 +10,10 @@ gsutil cp end_station_data.csv gs://$DEVSHELL_PROJECT_ID
 gcloud sql instances create my-demo --database-version=MYSQL_5_7 --region=$REGION --tier=db-n1-standard-1 --root-password=""
 gcloud sql connect my-demo --user=root --quiet
 
----------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 CREATE DATABASE bike;
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
