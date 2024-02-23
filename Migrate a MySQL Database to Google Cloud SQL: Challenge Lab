@@ -1,16 +1,14 @@
 Just run these commands IN SEQUENCE ----------
 
 
-TASK 1 --------------------------------------------------------------------------
-
+TASK 1 ------------------------------------------------------------------------------------------
 
 export ZONE=us-central1-a
 
 gcloud sql instances create wordpress --tier=db-n1-standard-1 --activation-policy=ALWAYS --gce-zone $ZONE
 
 
-TASK 2 --------------------------------------------------------------------------
-
+TASK 2 ------------------------------------------------------------------------------------------
 
 gcloud sql users set-password --host % root --instance wordpress --password Password1*
 
@@ -33,8 +31,7 @@ FLUSH PRIVILEGES;
 exit
 
 
-TASK 3 --------------------------------------------------------------------------
-
+TASK 3 ------------------------------------------------------------------------------------------
 
 sudo mysqldump -u root -pPassword1* wordpress > wordpress_backup.sql
 
@@ -45,8 +42,7 @@ mysql --host=$MYSQLIP --user=root -pPassword1* --verbose wordpress < wordpress_b
 sudo service apache2 restart
 
 
-TASK 4 --------------------------------------------------------------------------
-
+TASK 4 ------------------------------------------------------------------------------------------
 
 cd /var/www/html/wordpress
 
