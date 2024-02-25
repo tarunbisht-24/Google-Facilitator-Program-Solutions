@@ -33,3 +33,7 @@ gcloud compute instances create asia-test-01 \
 --subnet subnet-asia-east \
 --zone asia-east1-a \
 --tags ssh,http,rules
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
