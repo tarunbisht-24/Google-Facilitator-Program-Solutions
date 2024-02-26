@@ -1,6 +1,6 @@
 export ZONE= Fill Your Respective Zone
 
----------------------------------------------------
+------------------------------------------------------------------------------------------
 
 export REGION=${ZONE::-2}
 gcloud compute instances create web1 \
@@ -109,4 +109,8 @@ gcloud compute forwarding-rules create http-content-rule \
 --target-http-proxy=http-lb-proxy \
 --ports=80
 
----------------------------------------------------
+------------------------------------------------------------------------------------------
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
