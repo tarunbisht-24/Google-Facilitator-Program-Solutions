@@ -21,3 +21,7 @@ node redactImage.js $PROJECT_ID resources/test.png "" EMAIL_ADDRESS ./redacted-e
 gsutil cp redacted-string.txt gs://$DEVSHELL_PROJECT_ID-bucket
 gsutil cp redacted-phone.png gs://$DEVSHELL_PROJECT_ID-bucket
 gsutil cp redacted-email.png gs://$DEVSHELL_PROJECT_ID-bucket
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
