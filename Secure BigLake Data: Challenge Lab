@@ -1,6 +1,6 @@
 export USER2=
 
------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 gcloud services enable bigqueryconnection.googleapis.com
 bq mk --connection --location=US --project_id=$DEVSHELL_PROJECT_ID \
@@ -19,3 +19,7 @@ gcloud projects remove-iam-policy-binding $DEVSHELL_PROJECT_ID --member=$USER --
 bq query --use_legacy_sql=false \
 "SELECT * EXCEPT(zip, latitude, ip_address, longitude)
 FROM \`$DEVSHELL_PROJECT_ID.online_shop.user_online_sessions\`;"
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
