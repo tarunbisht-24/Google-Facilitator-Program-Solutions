@@ -1,5 +1,4 @@
-TASK 0 -----------------------------------------------------------------------------------
-
+TASK 0 ------------------------------------------------------------------------------------------
 
 gsutil cp gs://spls/gsp335/gsp335.zip .
 unzip gsp335.zip
@@ -12,23 +11,20 @@ CLOUD_SQL_INSTANCE_NAME=$(gcloud deployment-manager deployments describe $DM_DEP
 SA_NAME=$(gcloud deployment-manager deployments describe $DM_DEPLOYMENT | grep sa-wordpress | cut -d ' ' -f2)
  
 
-TASK 1 -----------------------------------------------------------------------------------
-
+TASK 1 ------------------------------------------------------------------------------------------
 
 gcloud container clusters create $CLUSTER_NAME  --machine-type n1-standard-4 --num-nodes 2 --zone us-central1-c --enable-network-policy
 gcloud container clusters get-credentials $CLUSTER_NAME --zone us-central1-c
  
 
-TASK 2 -----------------------------------------------------------------------------------
- 
+TASK 2 ------------------------------------------------------------------------------------------
  
 gcloud sql instances create $CLOUD_SQL_INSTANCE_NAME --region=us-central1
 gcloud sql databases create wordpress --instance $CLOUD_SQL_INSTANCE_NAME
 gcloud sql users create wordpress --instance=$CLOUD_SQL_INSTANCE_NAME --host=% --password='P@ssword!'
  
  
-TASK 3 -------------------------------------------------------------------------------
- 
+TASK 3 ------------------------------------------------------------------------------------------
  
 gcloud iam service-accounts create $SA_NAME --display-name $SA_NAME
  
@@ -42,8 +38,7 @@ kubectl create secret generic cloudsql-db-credentials \
  --from-literal password='P@ssword!'
 
 
-TASK 4 -----------------------------------------------------------------------------------
-
+TASK 4 ------------------------------------------------------------------------------------------
 
 kubectl apply -f volume.yaml
  
@@ -52,8 +47,7 @@ sed -i s/INSTANCE_CONNECTION_NAME/${GOOGLE_CLOUD_PROJECT}:us-central1:$CLOUD_SQL
 kubectl apply -f wordpress.yaml
 
 
-TASK 5 -----------------------------------------------------------------------------------
-
+TASK 5 ------------------------------------------------------------------------------------------
 
 helm upgrade --install ingress-nginx ingress-nginx \
 --repo https://kubernetes.github.io/ingress-nginx
@@ -76,8 +70,7 @@ sed -i s/HOST_NAME/${HOST_NAME}/g ingress.yaml
 kubectl apply -f ingress.yaml
  
  
-TASK 6 -----------------------------------------------------------------------------------
- 
+TASK 6 ------------------------------------------------------------------------------------------
  
 kubectl apply -f network-policy.yaml
  
@@ -112,8 +105,7 @@ gcloud services enable \
 gcloud container clusters update $CLUSTER_NAME --enable-binauthz --zone us-central1-c
  
  
-TASK 7 -----------------------------------------------------------------------------------
- 
+TASK 7 ------------------------------------------------------------------------------------------
  
 gcloud container binauthz policy export > bin-auth-policy.yaml
  
