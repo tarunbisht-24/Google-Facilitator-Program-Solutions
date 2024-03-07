@@ -6,7 +6,6 @@ export USER_NAME2=
 
 TASK 1 -------------------------------------------------------------------------------
 
-
 gcloud compute networks create griffin-dev-vpc --subnet-mode custom
 
 gcloud compute networks subnets create griffin-dev-wp --network=griffin-dev-vpc --region us-east1 --range=192.168.16.0/20
@@ -15,7 +14,6 @@ gcloud compute networks subnets create griffin-dev-mgmt --network=griffin-dev-vp
 
 
 TASK 2 -------------------------------------------------------------------------------
-
 
 gsutil cp -r gs://cloud-training/gsp321/dm .
 
