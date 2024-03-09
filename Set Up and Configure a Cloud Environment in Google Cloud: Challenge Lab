@@ -4,7 +4,7 @@ Firstly Let's Create Environment Variables!!
 export USER_NAME2=
 
 
-TASK 1 -------------------------------------------------------------------------------
+TASK 1 ------------------------------------------------------------------------------------------
 
 gcloud compute networks create griffin-dev-vpc --subnet-mode custom
 
@@ -13,7 +13,7 @@ gcloud compute networks subnets create griffin-dev-wp --network=griffin-dev-vpc 
 gcloud compute networks subnets create griffin-dev-mgmt --network=griffin-dev-vpc --region us-east1 --range=192.168.32.0/20
 
 
-TASK 2 -------------------------------------------------------------------------------
+TASK 2 ------------------------------------------------------------------------------------------
 
 gsutil cp -r gs://cloud-training/gsp321/dm .
 
@@ -27,8 +27,7 @@ gcloud deployment-manager deployments create prod-network \
 cd ..
 
 
-TASK 3 -------------------------------------------------------------------------------
-
+TASK 3 ------------------------------------------------------------------------------------------
 
 gcloud compute instances create bastion --network-interface=network=griffin-dev-vpc,subnet=griffin-dev-mgmt  --network-interface=network=griffin-prod-vpc,subnet=griffin-prod-mgmt --tags=ssh --zone=us-east1-b
 
@@ -37,8 +36,7 @@ gcloud compute firewall-rules create fw-ssh-dev --source-ranges=0.0.0.0/0 --targ
 gcloud compute firewall-rules create fw-ssh-prod --source-ranges=0.0.0.0/0 --target-tags ssh --allow=tcp:22 --network=griffin-prod-vpc
 
 
-TASK 4 -------------------------------------------------------------------------------
-
+TASK 4 ------------------------------------------------------------------------------------------
 
 gcloud sql instances create griffin-dev-db --root-password password --region=us-east1 --database-version=MYSQL_5_7
 
@@ -51,8 +49,7 @@ FLUSH PRIVILEGES;
 exit
 
 
-TASK 5 -------------------------------------------------------------------------------
-
+TASK 5 ------------------------------------------------------------------------------------------
 
 gcloud container clusters create griffin-dev \
   --network griffin-dev-vpc \
@@ -69,8 +66,7 @@ cd ~/
 gsutil cp -r gs://cloud-training/gsp321/wp-k8s .
 
 
-TASK 6 -------------------------------------------------------------------------------
-
+TASK 6 ------------------------------------------------------------------------------------------
 
 sed -i "s/username_goes_here/wp_user/g" wp-k8s/wp-env.yaml
 sed -i "s/username_goes_here/stormwind_rules/g" wp-k8s/wp-env.yaml
@@ -85,8 +81,7 @@ kubectl create secret generic cloudsql-instance-credentials \
     --from-file key.json
 
 
-TASK 7 -------------------------------------------------------------------------------
-
+TASK 7 ------------------------------------------------------------------------------------------
 
 sed -i "s/YOUR_SQL_INSTANCE/griffin-dev-db/g" wp-deployment.yaml
 
@@ -96,17 +91,15 @@ kubectl create -f wp-service.yaml
 kubectl get svc -w
 
 
-TASK 8 -------------------------------------------------------------------------------
-
+TASK 8 ------------------------------------------------------------------------------------------
 
 FOLLOW ANY YOUTUBE VIDEO!!
 
 
-TASK 9 -------------------------------------------------------------------------------
-
+TASK 9 ------------------------------------------------------------------------------------------
 
 gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=user:$USER_NAME2 --role=roles/edior
 
 
-hi
+
                                                      YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
