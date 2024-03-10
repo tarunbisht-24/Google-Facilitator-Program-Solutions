@@ -34,3 +34,7 @@ gcloud compute ssh my-instance \
 sudo apt-get update
 sudo apt-get install -y nginx
 ps auwx | grep nginx
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
