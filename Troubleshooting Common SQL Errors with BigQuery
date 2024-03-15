@@ -58,3 +58,7 @@ WHERE hits_product_v2ProductName IS NOT NULL
 GROUP BY hits_product_v2ProductCategory
 ORDER BY number_of_products DESC
 LIMIT 5'
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
