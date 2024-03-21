@@ -1,6 +1,7 @@
 export ZONE= Use your respective zone!
 
---------------------------------------------------
+
+------------------------------------------------------------------------------------------
 
 gcloud compute networks create mynetwork \
 --project=$DEVSHELL_PROJECT_ID \
@@ -33,3 +34,7 @@ gcloud compute instances create mynet-eu-vm \
 --shielded-integrity-monitoring \
 --labels=goog-ec-src=vm_add-gcloud \
 --reservation-affinity=any
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
