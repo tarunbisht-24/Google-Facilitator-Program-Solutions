@@ -16,3 +16,7 @@ export RESPONSE=$(curl -s -H 'Content-Type: application/json' -H 'Authorization:
 curl -s -H 'Content-Type: application/json' \
     -H 'Authorization: Bearer '$(gcloud auth print-access-token)'' \
     'https://videointelligence.googleapis.com/v1/$RESPONSE'
+
+
+
+                                                     YOU ARE DOING A GREAT JOB, KEEP WORKING !!!
